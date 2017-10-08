@@ -1,0 +1,67 @@
+%!TEX TS-program = rake
+\documentclass[10pt,letterpaper]{moderncv/moderncv}
+
+\input{preamble}
+\toggletrue{default}
+
+%-----------------------------------------------------------------------------
+% Top
+%-----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-3em}    % Omit if quote is included
+
+\input{Sections/education}
+\input{Sections/awards}
+\input{Sections/skills}
+\input{Sections/research-experience}
+\input{Sections/teaching}
+%\input{Sections/professional-experience}
+
+\input{Sections/grants}
+\input{Sections/advising}
+\input{Sections/synergistic-activities.tex}
+%\input{Sections/time-allocations}
+%\input{Sections/professional-activities-long}
+%\input{Sections/professional-activities}
+%\input{Sections/university-activities}
+%\input{Sections/research-interests}
+\input{Sections/software}
+%\input{Sections/invited-talks}
+
+
+%-----------------------------------------------------------------------------
+% Publications
+%-----------------------------------------------------------------------------
+\section{Publications}\small
+	\nocitePaper{*}
+	\bibliographystylePaper{plain-url-inline-revchron}
+	\bibliographyPaper{Bibliographies/Papers}
+
+	% Put some space between bibliography sections below here.
+	\let\oldsubsection\subsection
+	\renewcommand{\subsection}[1]{\vspace{\bibliographysectionspacing}\oldsubsection{#1}}
+
+	\nociteWorkshop{*}
+	\bibliographystyleWorkshop{plain-url-inline-revchron}
+	\bibliographyWorkshop{Bibliographies/Workshops}
+
+%    \nociteTutorial{*}
+%    \bibliographystyleTutorial{plain-url-inline-revchron}
+%    \bibliographyTutorial{Bibliographies/Tutorials}
+%
+%	\nociteBook{*}
+%	\bibliographystyleBook{plain-url-inline-revchron}
+%	\bibliographyBook{Bibliographies/Books}
+
+	\nocitePhD{*}
+	\bibliographystylePhD{plain-url-inline-revchron}
+	\bibliographyPhD{Bibliographies/PhD}
+
+	\nocitePoster{*}
+	\bibliographystylePoster{plain-url-inline-revchron}
+	\bibliographyPoster{Bibliographies/Posters}
+
+	% Restore subsection command in case something happens after here.
+	\let\subsection\oldsubsection
+\end{document}

@@ -1,0 +1,39 @@
+%!TEX TS-program = rake
+\documentclass[10pt,letterpaper]{moderncv/moderncv}
+
+\input{preamble}
+\toggletrue{resume}
+
+%-----------------------------------------------------------------------------
+% Top
+%-----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-3em}    % Omit if quote is included
+
+\input{Sections/education}
+\input{Sections/awards}
+\input{Sections/skills}
+\input{Sections/research-experience}
+
+%\input{Sections/time-allocations}
+%\input{Sections/professional-activities-long}
+%\input{Sections/professional-activities}
+%\input{Sections/university-activities}
+%\input{Sections/research-interests}
+\input{Sections/software}
+%\input{Sections/invited-talks}
+
+
+%-----------------------------------------------------------------------------
+% Publications
+%-----------------------------------------------------------------------------
+\section{Representative Publications}\small
+	\nocitePaper{*}
+	\bibliographystylePaper{plain-url-inline-revchron}
+	\bibliographyPaper{Bibliographies/Papers-rep}
+
+%\input{Sections/synergistic-activities.tex}
+	% Restore subsection command in case something happens after here.
+	\let\subsection\oldsubsection
+\end{document}

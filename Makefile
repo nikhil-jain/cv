@@ -15,7 +15,7 @@ multibib_names = $(shell \
 web_repo=/Users/jain6/work/profile/nikhil-jain.github.io
 
 # Any PDF is a valid target, but this is the default one.
-all: jain-cv.pdf jain-resume.pdf
+all: jain-cv.pdf jain-resume.pdf tutorial-cv.pdf
 
 %.pdf: %.tex Sections/*.tex Bibliographies/*.bib
 	$(latex) $*

@@ -1,0 +1,36 @@
+%!TEX TS-program = rake
+\documentclass[10pt,letterpaper]{moderncv/moderncv}
+
+\input{preamble}
+\toggletrue{grant}
+
+%-----------------------------------------------------------------------------
+%            Top
+%-----------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\vspace{-3em}    % Omit if quote is included
+
+\input{Sections/education}
+\input{Sections/short-experience}
+\input{Sections/awards}
+\input{Sections/grants}
+\input{Sections/synergistic-activities.tex}
+%\input{Sections/teaching}
+%\input{Sections/professional-activities-long}
+%\input{Sections/software-short}
+
+%-----------------------------------------------------------------------------
+% Publications
+%-----------------------------------------------------------------------------
+\section{Relevant Publications}\small
+	\nociteRep{*}
+	\bibliographystyleRep{plain-url-inline-revchron}
+  \vspace{-1.5em}
+	\bibliographyRep{Bibliographies/Papers-prop}
+
+%\input{Sections/synergistic-activities.tex}
+	% Restore subsection command in case something happens after here.
+	\let\subsection\oldsubsection
+\end{document}
+

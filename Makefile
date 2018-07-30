@@ -38,6 +38,9 @@ upload:
 		git push
 
 clean:
-	rm -f *.pdf
 	rm -f *.aux *.bbl *.blg *.log *.out *.top *.tui
 	rm -f *-mpgraph.mp *synctex.gz*
+
+cleanall: clean
+	rm -f *.pdf
+
